@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.example.house.dao.HouseDao" >
+
+    <resultMap id="houseMap" type="com.example.house.model.House" >
+        <id column="id" property="id" jdbcType="INTEGER" />
+        <result column="house_name" property="house_name" jdbcType="VARCHAR" />
+        <result column="house_area" property="house_area" jdbcType="VARCHAR" />
+        <result column="location" property="location" jdbcType="VARCHAR" />
+        <result column="house_type" property="house_type" jdbcType="VARCHAR" />
+        <result column="rent" property="rent" jdbcType="VARCHAR" />
+        <result column="house_state" property="house_state" jdbcType="VARCHAR" />
+        <result column="tel" property="tel" jdbcType="VARCHAR" />
+    </resultMap>
+
+<!--    添加房源-->
+    <insert id="addHouse" parameterType="com.example.house.model.House">
+        insert into house values (#{id}, #{house_name},#{house_area},
+                                            #{location},#{house_type}, #{rent},
+                                            #{house_state},#{tel})
+    </insert>
+
+    <select id="findHouses" resultMap="houseMap" parameterType="com.example.house.model.House">
+        select* from house
+                <where>
+                    house_state = 0
+                </where>
+    </select>
+
+    <select id="findRented" resultMap="houseMap" parameterType="com.example.house.model.House">
+        select* from house
+        <where>
+            house_state = 1
+        </where>
+    </select>
+
+    <select id="findApply" resultMap="houseMap" parameterType="com.example.house.model.House">
+        select* from house
+        <where>
+            house_state = -1
+        </where>
+    </select>
+
+    <select id="findByHouseName" resultMap="houseMap" parameterType="com.example.house.model.House">
+        select* from house
+        <where>
+            house_name like "%"#{house_name}"%"
+        </where>
+    </select>
+
+    <select id="findThisHouse" resultMap="houseMap" parameterType="com.example.house.model.House">
+        select* from house
+        <where>
+            id = #{id}
+        </where>
+    </select>
+
+    <update id="altHouse" parameterType="com.example.house.model.House">
+        update house set house_name=#{house.house_name},house_area=#{house.house_area},
+                                            location=#{house.location},house_type=#{house.house_type}, rent=#{house.rent},
+                                            house_state=#{house.house_state},tel=#{house.tel}
+                    where id = #{id}
+    </update>
+
+    <update id="applyHouse" parameterType="com.example.house.model.House">
+        update house set house_state="-1"
+                    where id = #{id}
+    </update>
+
+    <update id="agreeApply" parameterType="com.example.house.model.House">
+        update house set house_state="1"
+                    where id = #{id}
+    </update>
+    <update id="refuseApply" parameterType="com.example.house.model.House">
+        update house set house_state="0"
+                    where id = #{id}
+    </update>
+
+    <delete id="deleteHouse" parameterType="com.example.house.model.House">
+        delete from house
+        <where>
+            id = #{id}
+        </where>
+    </delete>
+
+</mapper>

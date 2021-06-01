@@ -1,0 +1,248 @@
+.red {
+    color: #9d2933;
+}
+
+.t-box {
+    line-height: 25px;
+    color: #333333;
+    letter-spacing: 1px;
+    border: solid 1px #cccccc;
+    border-left: solid 5px #455765;
+    padding: 15px;
+    margin: 15px;
+}
+
+.t-box a {
+    color: #455765;
+}
+
+.t-tab {
+    color: #999999;
+    margin: 15px;
+    border: solid 1px #ddd;
+    background-color: #f5f5f5;
+}
+
+.t-tab ul li {
+    float: left;
+    text-align: center;
+    padding: 30px 10px 10px 10px;
+    width: 129px;
+    height: 147px;
+    border: solid 1px #cccccc;
+    background-color: #ffffff;
+}
+
+.t-tab .tab-title {
+    border-bottom: solid 1px #cccccc;
+    padding: 10px;
+    color: #333333;
+}
+
+.t-tab .tab-code-ico {
+    margin: 10px 0;
+    text-align: center;
+    color: #333333;
+}
+
+#tab-ico {
+    display: inline-block;
+    padding: 10px;
+}
+
+#tab-ico li {
+    position: relative;
+}
+
+#tab-ico li b {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    font-size: 12px;
+}
+
+#tab-ico li b:hover {
+    color: #455765;
+}
+
+#tab-ico i {
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    background-color: #e7e7e7;
+    border-radius: 50px;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    -ms-border-radius: 50px;
+    -o-border-radius: 50px;
+    text-align: center;
+    color: #455765;
+}
+
+#tab-ico i:hover {
+    -webkit-transform: scale(1.5);
+    transform: scale(1.5);
+    -ms-transform: scale(1.5);
+    -moz-transform: scale(1.5);
+    -o-transform: scale(1.5);
+}
+
+.tab-content {
+    padding: 10px 0;
+    width: 100%;
+    display: inline-block;
+}
+
+.tab-content .tab-text {
+    width: 100%;
+    display: inline-block;
+}
+
+.tab-content .tab-wz {
+    background-color: #e7e7e7;
+    padding: 10px;
+    margin: 0 10px;
+    color: #555555;
+    line-height: 24px;
+    border-radius: 2px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -ms-border-radius: 2px;
+    -o-border-radius: 2px;
+}
+
+.tab-content .tab-wz p {
+    margin: 0;
+    vertical-align: top;
+}
+
+.tab-content .tab-wz:hover {
+    background-color: #cccccc;
+}
+
+.tab-wz .tab-context {
+    padding: 10px 0;
+    text-align: left;
+    line-height: 25px;
+    letter-spacing: 1px;
+    color: #53727d;
+}
+
+.t-tab .tab-code {
+    border-top: dashed 1px #cccccc;
+    padding: 10px 0;
+    color: #333333;
+}
+
+.t-tab .tab-code pre {
+    border: solid 1px #cccccc;
+    border-left: solid 6px #455765;
+    background-color: #F2F2F2;
+    color: #333333;
+    padding: 0px;
+    font-family: '微软雅黑';
+}
+
+.xh-code-h3 {
+    margin: 0px;
+    padding: 10px;
+    height: 32px;
+    line-height: 32px;
+    border-bottom: 1px solid #e2e2e2;
+    font-weight: normal;
+}
+
+.xh-code-h3 a {
+    float: right;
+}
+
+.tab-code ol {
+    margin: 0;
+    padding: 10px;
+    text-align: left;
+    padding-left: 27px;
+    word-break: break-all;
+    white-space: break-spaces;
+}
+
+.tab-code ol li {
+    margin-left: 10px;
+    list-style-type: decimal-leading-zero;
+    line-height: 20px;
+    border-left: solid 1px #cccccc;
+    color: #555;
+    padding-left: 5px;
+    line-height: 2em;
+}
+
+.tab-alert {
+    padding: 0 10px;
+}
+
+.tab-alert .xh-alert {
+    margin: 10px 0;
+}
+
+.tab-alert-h5 {
+    font-weight: normal;
+    color: #333333;
+    display: inline-block;
+    padding: 0 10px;
+    margin: 0;
+    line-height: 25px;
+    font-size: 14px;
+}
+
+.box_grid {
+    width: 100%;
+}
+
+.tab-alert .grid_box {
+    background-color: #e2e2e2;
+    padding: 10px 0;
+    color: #454545;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.groud {
+    padding: 0;
+    text-align: center;
+}
+
+.groud .xh-select {
+    margin-right: 10px;
+}
+
+.preview_box {
+    display: inline-block;
+    width: 100%;
+}
+
+.preview_box img {
+    float: left;
+    max-height: 150px;
+    width: auto;
+    margin: 0 10px 10px 0;
+    border: solid 1px #ccc;
+}
+
+@media (max-width: 768px) {
+    body {
+        font-size: 12px;
+    }
+    .tab-content .tab-wz {
+        margin: 10px;
+    }
+    .tab-content button {
+        margin-bottom: 5px;
+    }
+    .tab-alert-h5 {
+        font-size: 12px;
+    }
+    .tab-alert .grid_box {
+        font-size: 12px;
+    }
+}

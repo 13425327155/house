@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.example.house.dao.RootDao" >
+
+    <resultMap id="rootMap" type="com.example.house.model.Root" >
+        <id column="id" property="id" jdbcType="INTEGER" />
+        <result column="root_number" property="root_number" jdbcType="VARCHAR" />
+        <result column="root_password" property="root_password" jdbcType="VARCHAR" />
+        <result column="root_name" property="root_name" jdbcType="VARCHAR" />
+        <result column="root_mail" property="root_mail" jdbcType="VARCHAR" />
+    </resultMap>
+
+    <!--    登录-->
+    <select id="rootLogin" resultMap="rootMap" parameterType="com.example.house.model.Root">
+        select* from root
+        <where>
+            root_number= #{root_number} and root_password = #{root_password}
+        </where>
+    </select>
+
+
+</mapper>
